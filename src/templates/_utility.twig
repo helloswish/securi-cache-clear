@@ -1,0 +1,37 @@
+{% import "_includes/forms" as forms %}
+
+<h2>{{ 'Securi Cache Purge'|t }}</h2>
+
+<hr>
+
+<div class="field">
+	<div class="heading" style="margin-bottom: 1rem;">
+		{{ tag('label', {
+			html: 'Purge Entire Site Cache',
+		}) }}
+
+		{{ tag('div', {
+			class: ['instructions'],
+			html: 'Caution! The entire site cache will be purged from Securi.'|md,
+		}) }}
+	</div>
+
+	<a href="{{ actionUrl('securi-cache-clear/purge/purge-all') }}" class="btn submit" id="settings-purge-all">
+		{{- 'Purge Securi Cache'|t('cloudflare') -}}
+	</a>
+</div>
+
+
+
+{#{{ forms.textareaField( {#}
+{#	label: 'Purge Individual URLs'|t('cloudflare'),#}
+{#	id: 'settings-urls',#}
+{#	required: false,#}
+{#	name: 'urls',#}
+{#	autofocus: true,#}
+{#	instructions: 'Add complete URLs, each on its own line, that you’d like to purge from Securi’s cache.'|t('cloudflare')#}
+{#} ) }}#}
+
+{#<a class="btn submit" id="settings-purge-urls">#}
+{#	{{- 'Purge URLs'|t('cloudflare') -}}#}
+{#</a>#}

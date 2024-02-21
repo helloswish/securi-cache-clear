@@ -1,0 +1,40 @@
+{
+    "name": "helloswish/craft-securi-cache-clear",
+    "description": "Purge Securi caches from Craft.",
+    "type": "craft-plugin",
+    "license": "mit",
+    "support": {
+        "email": "support@swishdigital.co",
+        "issues": "https://github.com/helloswish/securi-cache-clear/issues?state=open",
+        "source": "https://github.com/helloswish/securi-cache-clear",
+        "docs": "https://github.com/helloswish/securi-cache-clear",
+        "rss": "https://github.com/helloswish/securi-cache-clear/releases.atom"
+    },
+    "require": {
+        "php": ">=8.0.2",
+        "craftcms/cms": "^4.3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "helloswish\\craftsecuricacheclear\\": "src/"
+        }
+    },
+    "extra": {
+        "handle": "securi-cache-clear",
+        "name": "Securi Cache Clear",
+        "developer": "Swish Digital",
+        "documentationUrl": "https://github.com/helloswish/securi-cache-clear",
+        "class": "helloswish\\craftsecuricacheclear\\Securi"
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "8.0.2"
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
+    }
+}
+

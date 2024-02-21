@@ -1,0 +1,23 @@
+{# @var plugin \helloswish\craftsecuricacheclear\Securi #}
+{# @var settings \helloswish\craftsecuricacheclear\models\Settings #}
+
+{% import '_includes/forms.twig' as forms %}
+
+<h2>Securi API Settings</h2>
+<p>You can find your Securi API settings within your Securi control panel under Settings > API. Ideally, set these values in your Craft .env file and then reference the .env vars here.</p>
+<hr>
+
+{{ forms.autosuggestField({
+	first: true,
+	label: 'Securi API Key',
+	name: 'apiKey',
+	value: settings.apiKey,
+	suggestEnvVars: true
+}) }}
+
+{{ forms.autosuggestField({
+	label: 'Securi API Secret',
+	name: 'apiSecret',
+	value: settings.apiSecret,
+	suggestEnvVars: true
+}) }}
