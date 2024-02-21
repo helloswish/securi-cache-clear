@@ -50,4 +50,4 @@ Go to your Craft control panel > Utilities > Securi Cache Purge and click the "P
 
 ## Support
 
-Please [file an issue](https://github.com/Swish-Digital/securi-cache-clear/issues) on Github. 
+Please [file an issue](https://github.com/helloswish/securi-cache-clear/issues) on Github. 
