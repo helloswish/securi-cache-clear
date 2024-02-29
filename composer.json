@@ -2,7 +2,7 @@
     "name": "helloswish/craft-securi-cache-clear",
     "description": "Purge Securi caches from Craft.",
     "type": "craft-plugin",
-    "version": "1.0.2",
+    "version": "5.0.0",
     "license": "mit",
     "support": {
         "email": "support@swishdigital.co",
@@ -13,7 +13,7 @@
     },
     "require": {
         "php": ">=8.0.2",
-        "craftcms/cms": "^4.3.5",
+        "craftcms/cms": "^4.3.5|^5.0.x-dev|^5.0.0",
         "ext-curl": "*"
     },
     "autoload": {
