@@ -1,5 +1,8 @@
 # Release Notes for Securi Cache Clear
 
+## 5.0.1 - 2024-03-01
+- Refined Craft 5 compatibility in Utility class init
+
 ## 5.0.0 - 2024-02-29
 - Added Craft 5 compatibility
 

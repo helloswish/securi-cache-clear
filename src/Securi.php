@@ -62,8 +62,21 @@ class Securi extends Plugin
     {
         // Register event handlers here ...
         // (see https://craftcms.com/docs/4.x/extend/events.html to get started)
-        Event::on(Utilities::class, Utilities::EVENT_REGISTER_UTILITY_TYPES, function (RegisterComponentTypesEvent $event) {
-            $event->types[] = Purge::class;
-        });
+
+        // The name of the event appears to have changed in Craft 5
+        // Craft 5 = EVENT_REGISTER_UTILITIES
+        // Older Craft versions = EVENT_REGISTER_UTILITY_TYPES
+        $craftVersion = Craft::$app->version;
+
+        if($craftVersion[0] === '5') {
+            Event::on(Utilities::class, Utilities::EVENT_REGISTER_UTILITIES, function (RegisterComponentTypesEvent $event) {
+                $event->types[] = Purge::class;
+            });
+        } else {
+            Event::on(Utilities::class, Utilities::EVENT_REGISTER_UTILITY_TYPES, function (RegisterComponentTypesEvent $event) {
+                $event->types[] = Purge::class;
+            });
+        }
+
     }
 }
